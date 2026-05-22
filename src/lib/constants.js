@@ -2,9 +2,10 @@ export const SITE_CONFIG = {
   name: 'ReservationKart',
   domain: 'reservationkart.com',
   tagline: 'Your dream travel just a phone call away!',
+  location: ' 30 Summer St Hagerstown , Maryland 21740',
   description: 'Book flights, hotels and holidays at lowest prices with 24/7 expert support.',
-  phone: '+1 8002345245 / 8007558156',       // ← Apna actual number daalo
-  email: 'support@reservationkart.com',
+  phone: '+1 8002345245 / 8007558156',       
+  email: ' Info@reservationdeskllc.com',
   social: {
     facebook: 'https://facebook.com/reservationkart',
     twitter: 'https://twitter.com/reservationkart',

@@ -406,12 +406,11 @@ function FlightCard({ flight, formatPrice }) {
               </div>
             )}
           </div>
-          <button
-            type="button"
-            className="px-5 py-2 rounded-lg bg-brand-orange-500 text-white text-sm font-bold hover:bg-brand-orange-600 active:scale-95 transition-all whitespace-nowrap"
-          >
-            Book Now
-          </button>
+         <Link
+          href={`/flights/booking?id=${flight.id}`}
+  className="px-5 py-2 rounded-lg bg-brand-orange-500 text-white text-sm font-bold hover:bg-brand-orange-600 active:scale-95 transition-all whitespace-nowrap">
+  Book Now
+</Link>
         </div>
       </div>
 

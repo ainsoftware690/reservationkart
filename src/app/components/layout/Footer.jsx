@@ -1,42 +1,53 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { Phone, Mail } from 'lucide-react';
-import { SITE_CONFIG, FOOTER_LINKS } from '../../../lib/constants';
+import Link from "next/link";
+import Image from "next/image";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { SITE_CONFIG, FOOTER_LINKS } from "../../../lib/constants";
 import {
   FacebookIcon,
   TwitterIcon,
   InstagramIcon,
   LinkedinIcon,
-} from '../../components/icons/SocialIcons';
+} from "../../components/icons/SocialIcons";
 
 // ✅ Yeh define hona chahiye tha — yahi missing tha
 const SOCIAL_LINKS = [
-  { Icon: FacebookIcon,  href: SITE_CONFIG.social.facebook,  label: 'Facebook'  },
-  { Icon: TwitterIcon,   href: SITE_CONFIG.social.twitter,   label: 'Twitter'   },
-  { Icon: InstagramIcon, href: SITE_CONFIG.social.instagram, label: 'Instagram' },
-  { Icon: LinkedinIcon,  href: SITE_CONFIG.social.linkedin,  label: 'LinkedIn'  },
+  { Icon: FacebookIcon, href: SITE_CONFIG.social.facebook, label: "Facebook" },
+  { Icon: TwitterIcon, href: SITE_CONFIG.social.twitter, label: "Twitter" },
+  {
+    Icon: InstagramIcon,
+    href: SITE_CONFIG.social.instagram,
+    label: "Instagram",
+  },
+  { Icon: LinkedinIcon, href: SITE_CONFIG.social.linkedin, label: "LinkedIn" },
 ];
 
 const FOOTER_COLUMNS = [
-  { title: 'Company',  links: FOOTER_LINKS.company  },
-  { title: 'Support',  links: FOOTER_LINKS.support  },
-  { title: 'Services', links: FOOTER_LINKS.services },
-  { title: 'Legal',    links: FOOTER_LINKS.legal    },
+  { title: "Company", links: FOOTER_LINKS.company },
+  { title: "Support", links: FOOTER_LINKS.support },
+  { title: "Services", links: FOOTER_LINKS.services },
+  { title: "Legal", links: FOOTER_LINKS.legal },
 ];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-dark-800 text-gray-300" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">Footer</h2>
+    <footer
+      className="bg-brand-dark-800 text-gray-300"
+      aria-labelledby="footer-heading"
+    >
+      <h2 id="footer-heading" className="sr-only">
+        Footer
+      </h2>
 
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-6">
-
           {/* Brand block — 2 cols */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block bg-white rounded-lg px-3 py-2">
+            <Link
+              href="/"
+              className="inline-block bg-white rounded-lg px-3 py-2"
+            >
               <Image
                 src="/images/logo.webp"
                 alt={SITE_CONFIG.name}
@@ -49,6 +60,10 @@ export default function Footer() {
             <p className="mt-4 text-sm leading-6 text-gray-400 max-w-xs">
               {SITE_CONFIG.description}
             </p>
+            <div className="mt-4 flex items-start gap-3 text-sm text-gray-400 max-w-xs">
+              <MapPin className="h-5 w-5 flex-shrink-0 text-brand-orange-500 mt-0.5" />
+              <span>{SITE_CONFIG.location}</span>
+            </div>
 
             <ul className="mt-6 space-y-3">
               <li className="flex items-start gap-3 text-sm">
