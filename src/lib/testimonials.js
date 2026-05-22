@@ -1,0 +1,38 @@
+export const TESTIMONIALS = [
+  {
+    id:     1,
+    name:   'Rahul Sharma',
+    role:   'Business Traveler',
+    city:   'Mumbai',
+    rating: 5,
+    text:   "Booked my Dubai flight in under 2 minutes. The 24/7 support team helped me reschedule when my meeting got moved. Best service ever!",
+    avatar: 'https://i.pravatar.cc/150?img=12',
+  },
+  {
+    id:     2,
+    name:   'Priya Patel',
+    role:   'Frequent Flyer',
+    city:   'Bengaluru',
+    rating: 5,
+    text:   "I've booked 15+ flights through ReservationKart. The prices are unbeatable and the phone support saved me twice during my Europe trip.",
+    avatar: 'https://i.pravatar.cc/150?img=47',
+  },
+  {
+    id:     3,
+    name:   'Amit Kumar',
+    role:   'Family Vacationer',
+    city:   'Delhi',
+    rating: 5,
+    text:   "Planned our entire Goa family trip — flights, hotels, all in one go. Super easy and the customer support is genuinely helpful, not robotic.",
+    avatar: 'https://i.pravatar.cc/150?img=68',
+  },
+  {
+    id:     4,
+    name:   'Sneha Reddy',
+    role:   'Solo Traveler',
+    city:   'Hyderabad',
+    rating: 5,
+    text:   "As a solo female traveler, I value security and reliability. ReservationKart delivers on both — transparent pricing, no hidden fees, real human help.",
+    avatar: 'https://i.pravatar.cc/150?img=44',
+  },
+];
