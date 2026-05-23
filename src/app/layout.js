@@ -14,9 +14,13 @@ export const metadata = {
   title: {
     default: 'ReservationKart — Book Cheap Flights, Hotels & Holidays',
     template: '%s | ReservationKart',
+
   },
   description: 'Book domestic and international flights at lowest prices.',
   metadataBase: new URL('https://reservationkart.com'),
+  icons: {
+    icon: "/images/icon.webp",
+  },
 };
 
 export const viewport = {
