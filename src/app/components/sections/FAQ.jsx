@@ -55,7 +55,7 @@ export default function FAQ() {
 
   return (
     <section
-      className="py-16 sm:py-20 bg-gradient-to-b from-white to-gray-50"
+      className="py-16 sm:py-20 bg-gradient-to-b from-white to-gray-50" id='faqs'
       aria-labelledby="faq-heading"
     >
       {/* SEO: structured data for Google */}

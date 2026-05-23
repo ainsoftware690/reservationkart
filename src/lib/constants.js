@@ -30,8 +30,8 @@ export const FOOTER_LINKS = {
     { label: 'Blog', href: '/blog' },
   ],
   support:  [
-    { label: 'Help Center', href: '/help' },
-    { label: 'FAQs', href: '/faqs' },
+    { label: 'Help Center', href: '/contact' },
+    { label: 'FAQs', href: '#faqs' },
     { label: 'Booking Status', href: '/booking-status' },
     { label: 'Cancellation', href: '/cancellation' },
   ],
