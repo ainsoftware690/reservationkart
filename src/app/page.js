@@ -6,6 +6,7 @@ import Offers from './components/sections/Offers';
 import WhyChooseUs from './components/sections/WhyChooseUs';
 import Testimonials from './components/sections/Testimonials';
 import FAQ from "./components/sections/FAQ"
+import Newsletter from './components/sections/Newsletter';
 
 
 
@@ -33,6 +34,7 @@ export default function HomePage() {
       <WhyChooseUs />
       <Testimonials />
        <FAQ />
+       <Newsletter />
     
     </>
   );

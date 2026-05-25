@@ -4,7 +4,9 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import { CurrencyProvider } from '../contexts/CurrencyContext';
 import OrganizationSchema from './components/SEO/OrganizationSchema';
-import ChatWidget from "./components/chat/ChatWidget"
+import ChatWidget from "./components/chat/ChatWidget";
+import CookieConsent from "./components/common/CookieConsent";
+import ScrollProgress from "./components/common/ScrollProgress";
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -108,10 +110,12 @@ export default function RootLayout({ children }) {
         <ChatWidget />
         <OrganizationSchema />
         <CurrencyProvider>
+        <ScrollProgress />  
           <Navbar />
           <main id="main-content">{children}</main>
           <Footer />
         </CurrencyProvider>
+        <CookieConsent />                 
       </body>
     </html>
   );

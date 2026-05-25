@@ -55,7 +55,7 @@ export async function POST(request) {
     // Call Groq API — using Llama 3.3 70B (best quality + free + fast)
     const completion = await groq.chat.completions.create({
       messages:    conversationHistory,
-      model:       'llama-3.3-70b-versatile',  // Latest, smartest free model
+      model:       'llama-3.3-70b-versatile', 
       temperature: 0.7,
       max_tokens:  1024,
       top_p:       0.95,
