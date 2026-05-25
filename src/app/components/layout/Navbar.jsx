@@ -9,16 +9,14 @@ import CurrencySwitcher from './CurrencySwitcher';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled,       setIsScrolled]       = useState(false);
 
-  // Scroll detection — passive listener for performance
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Body scroll lock when mobile menu open (UX fix)
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
@@ -36,7 +34,7 @@ export default function Navbar() {
         className="container-custom flex h-16 items-center justify-between md:h-20"
         aria-label="Main navigation"
       >
-        {/* Logo — priority loads it before everything (LCP boost) */}
+        {/* Logo */}
         <Link href="/" className="flex items-center" aria-label={`${SITE_CONFIG.name} Home`}>
           <Image
             src="/images/logo.webp"
@@ -63,16 +61,23 @@ export default function Navbar() {
         </ul>
 
         {/* Right actions */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+
+          {/* ✅ CURRENCY SWITCHER — Desktop */}
+          <div className="hidden md:block">
+            <CurrencySwitcher />
+          </div>
+
+          {/* Phone */}
           <a
             href={`tel:${SITE_CONFIG.phone}`}
-            className="hidden md:flex items-center gap-2 text-sm font-semibold text-brand-orange-500 hover:text-brand-orange-600 transition-colors"
-            aria-label="Call us"
+            className="hidden lg:flex items-center gap-2 text-sm font-semibold text-brand-orange-500 hover:text-brand-orange-600 transition-colors"
           >
             <Phone className="h-4 w-4" />
             <span>{SITE_CONFIG.phone}</span>
           </a>
 
+          {/* Login */}
           <Link
             href="/login"
             className="hidden md:inline-flex items-center gap-2 rounded-lg border border-gray-200 px-4 py-2 text-sm font-semibold text-brand-dark hover:border-brand-orange-500 hover:text-brand-orange-500 transition-colors"
@@ -81,7 +86,12 @@ export default function Navbar() {
             Login
           </Link>
 
-          {/* Mobile toggle */}
+          {/* ✅ CURRENCY SWITCHER — Mobile (compact) */}
+          <div className="md:hidden">
+            <CurrencySwitcher compact />
+          </div>
+
+          {/* Mobile menu toggle */}
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -95,7 +105,6 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      
       {isMobileMenuOpen && (
         <div className="lg:hidden border-t border-gray-100 bg-white">
           <ul className="container-custom py-4 space-y-1">
@@ -110,9 +119,10 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+
             <li className="pt-4 mt-2 border-t border-gray-100">
               
-               <a href={`tel:${SITE_CONFIG.phone}`}
+              <a  href={`tel:${SITE_CONFIG.phone}`}
                 className="flex items-center gap-2 px-3 py-3 font-semibold text-brand-orange-500"
               >
                 <Phone className="h-5 w-5" />

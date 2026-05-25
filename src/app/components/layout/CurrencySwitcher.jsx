@@ -6,11 +6,10 @@ import { CURRENCIES } from '../../../lib/currency';
 import { useCurrency } from '../../../contexts/CurrencyContext';
 
 export default function CurrencySwitcher({ compact = false }) {
-  const { currency, currencyData, changeCurrency } = useCurrency();
+  const { currency, currencyData, changeCurrency, isHydrated } = useCurrency();
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
 
-  // Outside click closes dropdown
   useEffect(() => {
     const handler = (e) => {
       if (ref.current && !ref.current.contains(e.target)) setIsOpen(false);
@@ -24,6 +23,7 @@ export default function CurrencySwitcher({ compact = false }) {
     setIsOpen(false);
   };
 
+  // ✅ Always render button — hydration safe (uses default until hydrated)
   return (
     <div ref={ref} className="relative">
       <button
@@ -31,13 +31,14 @@ export default function CurrencySwitcher({ compact = false }) {
         onClick={() => setIsOpen(!isOpen)}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
-        aria-label={`Change currency. Current: ${currencyData.name}`}
+        aria-label={`Change currency. Current: ${currencyData?.name || 'USD'}`}
+        suppressHydrationWarning
         className={`inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white font-semibold text-brand-dark hover:border-brand-orange-500 hover:text-brand-orange-500 transition-colors ${
           compact ? 'px-2.5 py-1.5 text-xs' : 'px-3 py-2 text-sm'
         }`}
       >
         <Globe className={compact ? 'h-3.5 w-3.5' : 'h-4 w-4'} />
-        <span>{currency}</span>
+        <span suppressHydrationWarning>{currency}</span>
         <ChevronDown
           className={`${compact ? 'h-3 w-3' : 'h-3.5 w-3.5'} transition-transform ${
             isOpen ? 'rotate-180' : ''
@@ -45,7 +46,7 @@ export default function CurrencySwitcher({ compact = false }) {
         />
       </button>
 
-      {isOpen && (
+      {isOpen && isHydrated && (
         <div
           role="listbox"
           aria-label="Select currency"
