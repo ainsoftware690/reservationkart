@@ -118,7 +118,7 @@ export default function HolidaysPage() {
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-white text-brand-orange-600 font-bold hover:bg-gray-50 shadow-lg">
               <Sparkles className="h-5 w-5" /> Plan My Trip
             </Link>
-            <a href="tel:+18000000000"
+            <a href="tel:+1 8002345245"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-white/20 backdrop-blur-sm text-white font-bold hover:bg-white/30">
               <Plane className="h-5 w-5" /> Talk to Expert
             </a>

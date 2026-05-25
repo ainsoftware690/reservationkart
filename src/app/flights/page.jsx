@@ -9,8 +9,14 @@ import FAQ from '../components/sections/FAQ';
 import { POPULAR_DESTINATIONS } from '../../lib/destinations';
 
 export const metadata = {
-  title: 'Book Cheap Flights | ReservationKart',
-  description: 'Search and book domestic & international flights at lowest prices. 500+ airlines, 24/7 support.',
+  title:       'Book Cheap Flights — 500+ Airlines | Best Prices',
+  description: 'Search & book domestic and international flights at lowest prices. Compare 500+ airlines, instant confirmation, 24/7 expert support. Book now!',
+  alternates:  { canonical: 'https://reservationkart.com/flights' },
+  openGraph: {
+    title:       'Book Cheap Flights | ReservationKart',
+    description: 'Compare 500+ airlines. Book flights at guaranteed lowest prices.',
+    url:         'https://reservationkart.com/flights',
+  },
 };
 
 const FEATURES = [
@@ -190,7 +196,7 @@ export default function FlightsPage() {
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 
-                 <a href="tel:+18000000000"
+                 <a href="tel:+1 8002345245"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-brand-orange-600 font-bold hover:bg-gray-50"
                 >
                   <Phone className="h-5 w-5" /> Call Now
