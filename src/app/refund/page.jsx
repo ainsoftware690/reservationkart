@@ -29,7 +29,7 @@ const SECTIONS = [
     title: 'How to Request a Cancellation or Refund',
     intro: 'To request a cancellation or refund, please follow these steps:',
     points: [
-      { text: 'Contact our customer support team via email at info@reservationkart.com or by phone at +1-800-222-8888.' },
+      { text: 'Contact our customer support team via email at info@reservationkart.com or by phone at +1 8002345245.' },
       { text: 'Provide your booking reference number and details of your request.' },
       { text: "Our team will review your request and inform you of the airline's policy, applicable fees, and refund eligibility." },
     ],
@@ -67,7 +67,7 @@ export default function RefundPage() {
       <div className="bg-brand-dark py-12 sm:py-16 text-white text-center">
         <div className="container-custom">
           <h1 className="text-3xl sm:text-4xl font-bold">Refund & Cancellation Policy</h1>
-          <p className="mt-2 text-white/70">Last Updated: January 1, 2025</p>
+          <p className="mt-2 text-white/70">Last Updated: January 1, 2024</p>
           <p className="mt-3 text-white/80 max-w-2xl mx-auto text-sm sm:text-base">
             At ReservationKart, we strive to provide a seamless experience for booking airline
             services. This policy outlines the terms for cancelling bookings and requesting

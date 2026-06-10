@@ -26,7 +26,7 @@ export async function POST(request) {
   try {
     // Rate limiting by IP
     const ip = request.headers.get('x-forwarded-for') || 'unknown';
-    if (!checkRateLimit(ip)) {
+    if (!checkRateLimit(ip)) {    
       return NextResponse.json(
         { error: 'Too many requests. Please try again in a minute.' },
         { status: 429 }

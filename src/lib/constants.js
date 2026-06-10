@@ -1,11 +1,44 @@
+// export const SITE_CONFIG = {
+//   name:        'ReservationKart',
+//   domain:      'reservationkart.com',
+//   tagline:     'Your dream travel just a phone call away!',
+//   description: 'Book flights, hotels and holidays at lowest prices with 24/7 expert support.',
+//   phone:       '+91-9881722078',
+//   email:       'info@reservationkart.com',    // ← Update
+//   address:     'Address - Reservationkart Enterprises Bizz Bay Ofc #126, Commercial Complex, Opposite HDFC Bank, NIBM Undri Pune - 411048 Maharashtra India ',
+//   social: {
+//     facebook:  'https://facebook.com/reservationkart',
+//     twitter:   'https://twitter.com/reservationkart',
+//     instagram: 'https://instagram.com/reservationkart',
+//     linkedin: 'https://linkedin.com/company/reservationkart',
+//   },
+// };
+
 export const SITE_CONFIG = {
   name: 'ReservationKart',
   domain: 'reservationkart.com',
   tagline: 'Your dream travel just a phone call away!',
-  location: ' 30 Summer St Hagerstown , Maryland 21740',
-  description: 'Book flights, hotels and holidays at lowest prices with 24/7 expert support.',
-  phone: '+1 8002345245 / 8007558156',       
-  email: ' Info@reservationdeskllc.com',
+  description:
+    'Book flights, hotels and holidays at lowest prices with 24/7 expert support.',
+
+  phone: '+1 8002345245',
+  email: 'info@reservationkart.com',
+
+  addresses: [
+  {
+    title: 'USA Office',
+    address: '30 Summer St, Hagerstown, Maryland 21740, United States',
+    phone: '+1 8002345245',
+    email: 'info@reservationkart.com',
+  },
+  {
+    title: 'India Office',
+    address:'Reservationkart Enterprises, Bizz Bay Office #126, Commercial Complex, Opposite HDFC Bank, NIBM Undri, Pune - 411048, Maharashtra, India',
+    phone: '+91-9881722078',
+    email: 'info@reservationkart.com',
+  },
+],
+
   social: {
     facebook: 'https://facebook.com/reservationkart',
     twitter: 'https://twitter.com/reservationkart',
@@ -13,7 +46,6 @@ export const SITE_CONFIG = {
     linkedin: 'https://linkedin.com/company/reservationkart',
   },
 };
-
 export const NAV_LINKS = [
   { label: 'Flights', href: '/flights' },
   { label: 'Hotels', href: '/hotels' },

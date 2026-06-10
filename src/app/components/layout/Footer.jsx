@@ -60,12 +60,31 @@ export default function Footer() {
             <p className="mt-4 text-sm leading-6 text-gray-400 max-w-xs">
               {SITE_CONFIG.description}
             </p>
-            <div className="mt-4 flex items-start gap-3 text-sm text-gray-400 max-w-xs">
-              <MapPin className="h-5 w-5 flex-shrink-0 text-brand-orange-500 mt-0.5" />
-              <span>{SITE_CONFIG.location}</span>
-            </div>
+    <div className="mt-8 space-y-5">
+  {SITE_CONFIG.addresses.map((office, index) => (
+    <div key={index} className="space-y-2">
+      <div className="flex items-start gap-3 mt-8">
+        <MapPin className="h-5 w-5 flex-shrink-0 text-brand-orange-500 mt-1" />
+        <div>
+          <p className="font-semibold text-white">{office.title}</p>
+          <p className="text-sm text-gray-400">{office.address}</p>
+        </div>
+      </div>
 
-            <ul className="mt-6 space-y-3">
+      <div className="flex items-center gap-3 ml-8">
+        <Phone className="h-4 w-4 text-brand-orange-500" />
+        <span className="text-sm text-gray-400">{office.phone}</span>
+      </div>
+
+      <div className="flex items-center gap-3 ml-8">
+        <Mail className="h-4 w-4 text-brand-orange-500" />
+        <span className="text-sm text-gray-400">{office.email}</span>
+      </div>
+    </div>
+  ))}
+</div>
+
+            {/* <ul className="mt-6 space-y-3">
               <li className="flex items-start gap-3 text-sm">
                 <Phone className="h-5 w-5 flex-shrink-0 text-brand-orange-500 mt-0.5" />
                 <a
@@ -84,7 +103,7 @@ export default function Footer() {
                   {SITE_CONFIG.email}
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
 
           {/* Link columns */}
