@@ -74,7 +74,7 @@ export async function POST(request) {
 
     return NextResponse.json(
       {
-        error: 'Sorry, I encountered an error. Please try again or call support at +1 8002345245.',
+        error: 'Sorry, I encountered an error. Please try again or call support at +1 855 316 3173.',
         details: process.env.NODE_ENV === 'development' ? error.message : undefined,
       },
       { status: 500 }

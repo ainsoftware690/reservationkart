@@ -34,7 +34,7 @@ const ADDON_OPTIONS = [
   },
 ];
 
-export default function ContactAddons({ onSubmit, onBack, initialAddons = {} }) {
+export default function ContactAddons({ onSubmit, onBack,  initialAddons = {} }) {
   const { formatPrice } = useCurrency();
 
   const [email, setEmail]       = useState('');

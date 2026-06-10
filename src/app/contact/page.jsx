@@ -237,7 +237,7 @@ export default function ContactPage() {
                           type="tel"
                           value={form.phone}
                           onChange={(e) => update("phone", e.target.value)}
-                          placeholder="+1 8002345245"
+                          placeholder="+1 855 316 3173"
                           className={input()}
                         />
                       </Field>

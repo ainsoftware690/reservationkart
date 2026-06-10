@@ -54,7 +54,7 @@ export default function Hero() {
 
             {/* Secondary button — white outline for dark bg */}
             <a
-              href={`tel:+1 8002345245`}
+              href={`tel:+1 855 316 3173`}
               className="inline-flex items-center justify-center w-full sm:w-auto rounded-lg border-2 border-white/70 bg-transparent px-6 py-3 text-base font-semibold text-white transition-all hover:bg-white hover:text-brand-dark active:scale-95"
             >
               <Phone className="mr-2 h-5 w-5" />

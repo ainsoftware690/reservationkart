@@ -103,7 +103,7 @@ export default function TrendingRoutes() {
 
               {/* CTA Button */}
               <a
-                href="tel:+1 8002345245"
+                href="tel:+1 855 316 3173"
                 className="flex items-center justify-center gap-2 w-full bg-[#ff8025] hover:bg-[#ff8025]/90 active:scale-95 text-gray-900 font-bold text-sm py-3 rounded-xl transition-all duration-200 shadow-sm hover:shadow-[#ff7438]/60 hover:shadow-lg"
               >
                 <Phone className="w-4 h-4" />

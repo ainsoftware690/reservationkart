@@ -141,7 +141,7 @@ export const FAQS = [
     id:       20,
     category: 'support',
     question: 'How do I contact customer support?',
-    answer:   "We offer multiple support channels available 24/7: Phone (+1 8002345245), Live Chat on our website, Email (info@reservationkart.com), and WhatsApp. Average response time is under 2 minutes for chat and phone, and under 4 hours for email. Premium members get priority support.",
+    answer:   "We offer multiple support channels available 24/7: Phone (+1 855 316 3173), Live Chat on our website, Email (info@reservationkart.com), and WhatsApp. Average response time is under 2 minutes for chat and phone, and under 4 hours for email. Premium members get priority support.",
   },
   {
     id:       21,
@@ -153,6 +153,6 @@ export const FAQS = [
     id:       22,
     category: 'support',
     question: 'What if I face an emergency during travel?',
-    answer:   "Our 24/7 emergency hotline (+1 8002345245) is available for urgent issues like missed connections, sudden cancellations, lost documents, or medical emergencies abroad. We coordinate directly with airlines and partners worldwide to find the fastest resolution — even at 3 AM on holidays.",
+    answer:   "Our 24/7 emergency hotline (+1 855 316 3173) is available for urgent issues like missed connections, sudden cancellations, lost documents, or medical emergencies abroad. We coordinate directly with airlines and partners worldwide to find the fastest resolution — even at 3 AM on holidays.",
   },
 ];

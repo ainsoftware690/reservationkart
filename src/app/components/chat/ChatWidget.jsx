@@ -255,7 +255,7 @@ export default function ChatWidget() {
               className="text-xs text-gray-600 hover:text-brand-orange-500 flex items-center gap-1.5 font-semibold"
             >
               <Phone className="h-3 w-3" />
-              Or call +1 8002345245
+              Or call +1 855 316 3173
             </a>
             <span className="text-xs text-gray-400">
               Powered by AI ⚡

@@ -21,14 +21,14 @@ export const SITE_CONFIG = {
   description:
     'Book flights, hotels and holidays at lowest prices with 24/7 expert support.',
 
-  phone: '+1 8002345245',
+  phone: '+1 855 316 3173',
   email: 'info@reservationkart.com',
 
   addresses: [
   {
     title: 'USA Office',
     address: '30 Summer St, Hagerstown, Maryland 21740, United States',
-    phone: '+1 8002345245',
+    phone: '+1 855 316 3173',
     email: 'info@reservationkart.com',
   },
   {

@@ -157,7 +157,7 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-white text-brand-orange-600 font-bold hover:bg-gray-50 shadow-lg">
               <Plane className="h-5 w-5" /> Search Flights
             </Link>
-            <a href="tel:+1 8002345245"
+            <a href="tel:+1 855 316 3173"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-white/20 backdrop-blur-sm text-white font-bold hover:bg-white/30">
               <Phone className="h-5 w-5" /> Call Us Now
             </a>
