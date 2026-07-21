@@ -1,6 +1,8 @@
 import { decrypt } from "../../../../lib/ccavenue";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req) {
   const formData = await req.formData();
   const encResp = formData.get("encResp");

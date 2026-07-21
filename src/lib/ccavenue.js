@@ -1,6 +1,6 @@
 import crypto from "crypto";
 
-const WORKING_KEY = process.env.CCAVENUE_WORKING_KEY; // .env mein daalo
+const WORKING_KEY = process.env.CCAVENUE_WORKING_KEY; // set this in .env.local and Vercel
 
 function getKeyIv() {
   const md5Hash = crypto.createHash("md5").update(WORKING_KEY).digest();

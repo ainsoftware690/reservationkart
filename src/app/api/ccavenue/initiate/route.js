@@ -1,6 +1,8 @@
 import { encrypt } from "../../../../lib/ccavenue";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+
 // Test:       https://test.ccavenue.com/transaction/transaction.do
 // Production: https://secure.ccavenue.com/transaction/transaction.do
 const CCAVENUE_URL = "https://secure.ccavenue.com/transaction/transaction.do";
