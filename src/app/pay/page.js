@@ -25,7 +25,7 @@ export default function PayPage() {
       <h2>Create Payment Link</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: 12 }}>
-          <label>Amount (INR) *</label>
+         <label>Amount (USD) *</label>
           <input
             type="number"
             name="amount"

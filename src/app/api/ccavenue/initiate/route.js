@@ -27,7 +27,7 @@ export async function GET(req) {
   const data =
     `merchant_id=${MERCHANT_ID}` +
     `&order_id=${orderId}` +
-    `&currency=INR` +
+    `&currency=USD` +
     `&amount=${amount}` +
     `&redirect_url=${REDIRECT_URL}` +
     `&cancel_url=${CANCEL_URL}` +
@@ -35,7 +35,6 @@ export async function GET(req) {
     `&billing_name=${customerName}` +
     `&billing_email=${email}` +
     `&billing_tel=${phone}`;
-
   const encRequest = encrypt(data);
 
   const html = `
