@@ -1,5 +1,14 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+function generateOrderId() {
+  const now = new Date();
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, "0");
+  const dd = String(now.getDate()).padStart(2, "0");
+  const random = Math.floor(1000 + Math.random() * 9000); // 4-digit random
+  return `RSK${yyyy}${mm}${dd}${random}`;
+}
 
 export default function PayPage() {
   const [form, setForm] = useState({
@@ -9,6 +18,10 @@ export default function PayPage() {
     email: "",
     phone: "",
   });
+
+  useEffect(() => {
+    setForm((prev) => ({ ...prev, order_id: generateOrderId() }));
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -25,7 +38,7 @@ export default function PayPage() {
       <h2>Create Payment Link</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: 12 }}>
-         <label>Amount (USD) *</label>
+          <label>Amount (USD) *</label>
           <input
             type="number"
             name="amount"
