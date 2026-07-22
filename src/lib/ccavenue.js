@@ -1,10 +1,10 @@
 import crypto from "crypto";
 
-const WORKING_KEY = process.env.CCAVENUE_WORKING_KEY; // set this in .env.local and Vercel
+const WORKING_KEY = (process.env.CCAVENUE_WORKING_KEY || "").trim();
 
 function getKeyIv() {
   const md5Hash = crypto.createHash("md5").update(WORKING_KEY).digest();
-  const iv = Buffer.alloc(16, 0); // CCAvenue fixed IV = 16 zero bytes
+  const iv = Buffer.alloc(16, 0);
   return { key: md5Hash, iv };
 }
 

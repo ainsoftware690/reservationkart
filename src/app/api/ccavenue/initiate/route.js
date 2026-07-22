@@ -7,6 +7,11 @@ export const dynamic = "force-dynamic";
 // Production: https://secure.ccavenue.com/transaction/transaction.do
 const CCAVENUE_URL = "https://secure.ccavenue.com/transaction/transaction.do";
 
+const MERCHANT_ID = (process.env.CCAVENUE_MERCHANT_ID || "").trim();
+const ACCESS_CODE = (process.env.CCAVENUE_ACCESS_CODE || "").trim();
+const REDIRECT_URL = (process.env.CCAVENUE_REDIRECT_URL || "").trim();
+const CANCEL_URL = (process.env.CCAVENUE_CANCEL_URL || "").trim();
+
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
   const amount = searchParams.get("amount");
@@ -20,12 +25,12 @@ export async function GET(req) {
   }
 
   const data =
-    `merchant_id=${process.env.CCAVENUE_MERCHANT_ID}` +
+    `merchant_id=${MERCHANT_ID}` +
     `&order_id=${orderId}` +
     `&currency=INR` +
     `&amount=${amount}` +
-    `&redirect_url=${process.env.CCAVENUE_REDIRECT_URL}` +
-    `&cancel_url=${process.env.CCAVENUE_CANCEL_URL}` +
+    `&redirect_url=${REDIRECT_URL}` +
+    `&cancel_url=${CANCEL_URL}` +
     `&language=EN` +
     `&billing_name=${customerName}` +
     `&billing_email=${email}` +
@@ -39,7 +44,7 @@ export async function GET(req) {
         <p>Redirecting to secure payment gateway, please wait...</p>
         <form method="post" action="${CCAVENUE_URL}">
           <input type="hidden" name="encRequest" value="${encRequest}" />
-          <input type="hidden" name="access_code" value="${process.env.CCAVENUE_ACCESS_CODE}" />
+          <input type="hidden" name="access_code" value="${ACCESS_CODE}" />
           <input type="hidden" name="command" value="initiateTransaction" />
         </form>
       </body>
