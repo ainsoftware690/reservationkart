@@ -8,7 +8,7 @@ export async function POST(req) {
   const encResp = formData.get("encResp");
 
   if (!encResp) {
-    return NextResponse.redirect("https://reservationkart.com/payment-failed");
+    return NextResponse.redirect("https://reservationkart.com/payment-failed", 303);
   }
 
   const decrypted = decrypt(encResp);
@@ -22,11 +22,13 @@ export async function POST(req) {
 
   if (orderStatus === "Success") {
     return NextResponse.redirect(
-      `https://reservationkart.com/payment-success?order_id=${orderId}&amount=${amount}`
+      `https://reservationkart.com/payment-success?order_id=${orderId}&amount=${amount}`,
+      303
     );
   }
 
   return NextResponse.redirect(
-    `https://reservationkart.com/payment-failed?order_id=${orderId}`
+    `https://reservationkart.com/payment-failed?order_id=${orderId}`,
+    303
   );
 }
