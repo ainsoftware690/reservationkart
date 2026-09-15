@@ -141,7 +141,7 @@ export async function POST(request) {
     console.error('Contact API error:', error);
     return NextResponse.json(
       {
-        error:   'Failed to send message. Please call +1 855 316 3173 or try again.',
+        error:   'Failed to send message. Please call +1 888 478 6801 or try again.',
         details: process.env.NODE_ENV === 'development' ? error.message : undefined,
       },
       { status: 500 }
@@ -264,7 +264,7 @@ function getCustomerEmailHTML({ name, topic, message }) {
                     <span style="color:#666;">Call our 24/7 support hotline</span>
                   </td>
                   <td align="right">
-                    <a href="tel:+1 855 316 3173" style="background:#F26522;color:#ffffff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:700;font-size:13px;white-space:nowrap;">
+                    <a href="tel:+1 888 478 6801" style="background:#F26522;color:#ffffff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:700;font-size:13px;white-space:nowrap;">
                       Call Now
                     </a>
                   </td>
@@ -285,8 +285,8 @@ function getCustomerEmailHTML({ name, topic, message }) {
           <p style="margin:0 0 8px;color:#ffffff;font-weight:700;">ReservationKart</p>
           <p style="margin:0;font-size:12px;">Your dream travel, just a phone call away</p>
           <p style="margin:16px 0 0;font-size:11px;opacity:0.6;">
-            30 Summer St, Hagerstown, Maryland 21740<br>
-            +1 855 316 3173 • info@reservationkart.com
+            3718 Gwynn Oak Ave, Gwynn Oak, MD, 21207<br>
+            +1 888 478 6801 • info@reservationkart.com
           </p>
         </td></tr>
 

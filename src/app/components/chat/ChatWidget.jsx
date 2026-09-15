@@ -100,7 +100,7 @@ export default function ChatWidget() {
     } catch (error) {
       setMessages((prev) => [...prev, {
         role:    'assistant',
-        content: `${error.message}\n\nYou can also call us directly at +1 8002345245 for immediate help.`,
+        content: `${error.message}\n\nYou can also call us directly at +1 888 478 6801 for immediate help.`,
         timestamp: Date.now(),
         isError:   true,
       }]);
@@ -251,11 +251,11 @@ export default function ChatWidget() {
           {/* Footer with phone */}
           <div className="px-4 py-2 border-t border-gray-100 bg-gray-50 flex items-center justify-between">
             <a
-              href="tel:+18002228888"
+              href="tel: +1 888 478 6801"
               className="text-xs text-gray-600 hover:text-brand-orange-500 flex items-center gap-1.5 font-semibold"
             >
               <Phone className="h-3 w-3" />
-              Or call +1 855 316 3173
+              Or call +1 888 478 6801
             </a>
             <span className="text-xs text-gray-400">
               Powered by AI ⚡

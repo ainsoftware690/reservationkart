@@ -21,22 +21,22 @@ export const SITE_CONFIG = {
   description:
     'Book flights, hotels and holidays at lowest prices with 24/7 expert support.',
 
-  phone: '+1 855 316 3173',
+  phone: '+1 888 478 6801',
   email: 'info@reservationkart.com',
 
   addresses: [
   {
-    title: 'USA Office',
-    address: '30 Summer St, Hagerstown, Maryland 21740, United States',
-    phone: '+1 855 316 3173',
+    title: 'Office',
+    address: '3718 Gwynn Oak Ave, Gwynn Oak, MD, 21207',
+    phone: '+1 888 478 6801',
     email: 'info@reservationkart.com',
   },
-  {
-    title: 'India Office',
-    address:'Reservationkart Enterprises, Bizz Bay Office #126, Commercial Complex, Opposite HDFC Bank, NIBM Undri, Pune - 411048, Maharashtra, India',
-    phone: '+91-9881722078',
-    email: 'info@reservationkart.com',
-  },
+  // {
+  //   title: 'India Office',
+  //   address:'Reservationkart Enterprises, Bizz Bay Office #126, Commercial Complex, Opposite HDFC Bank, NIBM Undri, Pune - 411048, Maharashtra, India',
+  //   phone: '+1 888 478 6801',
+  //   email: 'info@reservationkart.com',
+  // },
 ],
 
   social: {

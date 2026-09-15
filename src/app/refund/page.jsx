@@ -29,7 +29,7 @@ const SECTIONS = [
     title: 'How to Request a Cancellation or Refund',
     intro: 'To request a cancellation or refund, please follow these steps:',
     points: [
-      { text: 'Contact our customer support team via email at info@reservationkart.com or by phone at +1 8002345245.' },
+      { text: 'Contact our customer support team via email at info@reservationkart.com or by phone at +1 888 478 6801.' },
       { text: 'Provide your booking reference number and details of your request.' },
       { text: "Our team will review your request and inform you of the airline's policy, applicable fees, and refund eligibility." },
     ],
@@ -161,11 +161,11 @@ export default function RefundPage() {
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             <a
-              href="tel:+1 8002345245"
+              href="tel:+1 888 478 6801"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-orange-500 text-white font-bold hover:bg-brand-orange-600 transition-colors"
             >
               <Phone className="h-4 w-4" />
-               +1 8002345245
+               +1 888 478 6801
             </a>
             
              <a href="mailto:info@reservationkart.com"
