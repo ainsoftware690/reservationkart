@@ -131,7 +131,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 border-t border-gray-700 pt-8 flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-gray-400">
-            © 2024 {SITE_CONFIG.name}. All rights reserved.
+            © 2026 {SITE_CONFIG.name}. All rights reserved.
           </p>
 
           <ul className="flex items-center gap-4">
